@@ -17,14 +17,11 @@ phases:
       - locale-gen en_US en_US.UTF-8
       - dpkg-reconfigure locales
 
-      - mkdir work
-      - git clone https://github.com/ikasam/yaml_cv.git
-      - mv yaml_cv/* .
+      - mv ${CODEBUILD_SRC_DIR_script}/* .
       - bundle install
       - mv ${CODEBUILD_SRC_DIR_data}/* .
   build:
     commands:
-      - ls -la
       - ruby make_cv.rb -s style.light.txt -o output.pdf
 artifacts:
   files:
