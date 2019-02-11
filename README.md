@@ -32,3 +32,12 @@ https://qiita.com/kaityo256/items/e3884d0109223c324baf
     |Repository URL|{your resume repository}|
     * required repository root have data.yaml
     * you can choose from S3
+
+## Environment
+
+|field name|value|
+|---|---|
+|New environment image|Managed image|
+|Operating system|Ubuntu|
+|Runtime|Ruby|
+|Runtime version|aws/codebuild/ruby:2.5.3|
