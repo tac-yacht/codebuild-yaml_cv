@@ -9,7 +9,7 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get upgrade
+      - apt-get upgrade -y
   pre_build:
     commands:
       - mkdir work
