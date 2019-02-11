@@ -41,3 +41,7 @@ https://qiita.com/kaityo256/items/e3884d0109223c324baf
 |Operating system|Ubuntu|
 |Runtime|Ruby|
 |Runtime version|aws/codebuild/ruby:2.5.3|
+
+# License
+* [fonts](fonts) dir children all files: [IPA Font License V1.0](fonts/IPA_Font_License_Agreement_v1.0.txt)
+* others: [MIT License](LICENSE)
