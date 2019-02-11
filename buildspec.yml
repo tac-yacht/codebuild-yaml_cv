@@ -18,14 +18,14 @@ phases:
       - dpkg-reconfigure locales
 
       - mkdir work
-      - git clone https://github.com/kaityo256/yaml_cv.git
+      - git clone https://github.com/ikasam/yaml_cv.git
       - mv yaml_cv/* .
       - bundle install
       - mv ${CODEBUILD_SRC_DIR_data}/* .
   build:
     commands:
       - ls -la
-      - ruby make_cv.rb -o output.pdf
+      - ruby make_cv.rb -s style.light.txt -o output.pdf
 artifacts:
   files:
     - output.pdf
