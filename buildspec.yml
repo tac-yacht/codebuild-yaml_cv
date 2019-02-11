@@ -12,6 +12,11 @@ phases:
       - apt-get upgrade -y
   pre_build:
     commands:
+      # https://docs.aws.amazon.com/ja_jp/codebuild/latest/userguide/troubleshooting.html#troubleshooting-utf-8
+      - export LC_ALL="en_US.UTF-8"
+      - locale-gen en_US en_US.UTF-8
+      - dpkg-reconfigure locales
+
       - mkdir work
       - git clone https://github.com/kaityo256/yaml_cv.git
       - mv yaml_cv/* .
