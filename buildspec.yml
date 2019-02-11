@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  variables:
+    key: "value"
+    key: "value"
+            
+phases:
+  install:
+    commands:
+      - apt-get update
+      - apt-get upgrade
+  pre_build:
+    commands:
+      - mkdir work
+      - git clone https://github.com/kaityo256/yaml_cv.git
+      - mv yaml_cv/* .
+      - bundle install
+      - mv ${CODEBUILD_SRC_DIR_data}/* .
+  build:
+    commands:
+      - ruby make_cv.rb -o output.pdf
+artifacts:
+  files:
+    - output.pdf
