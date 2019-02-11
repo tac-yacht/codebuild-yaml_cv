@@ -19,6 +19,7 @@ phases:
       - mv ${CODEBUILD_SRC_DIR_data}/* .
   build:
     commands:
+      - ls -la
       - ruby make_cv.rb -o output.pdf
 artifacts:
   files:
